@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="icons">
+    <file alias="terminal.png">icons/terminal.png</file>
+    <file alias="exit.png">icons/application-exit.png</file>
+    <file alias="edit.png">icons/document-edit.png</file>
+    <file alias="new.png">icons/document-new.png</file>
+    <file alias="open.png">icons/document-open.png</file>
+    <file alias="save.png">icons/document-save.png</file>
+    <file alias="delete.png">icons/edit-delete.png</file>
+    <file alias="apply.png">icons/dialog-ok-apply.png</file>
+    <file alias="ok.png">icons/dialog-ok.png</file>
+    <file alias="cancel.png">icons/dialog-cancel.png</file>
+    <file alias="apply2.png">icons/debug-step-into-instruction.png</file>
+  </qresource>
+</RCC>

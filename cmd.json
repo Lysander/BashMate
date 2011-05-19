@@ -1,0 +1,24 @@
+[
+    {
+        "info": "Listet alle Dateien einer Endung {suffix} auf", 
+        "command": "ls *.{suffix}", 
+        "names": [
+            "suffix"
+        ]
+    }, 
+    {
+        "info": "Erstellt ein Backup der Datei {fpath} mit der Endung {suffix}", 
+        "command": "cp {fpath} {fpath}.{suffix}", 
+        "names": [
+            "fpath", 
+            "suffix"
+        ]
+    }, 
+    {
+        "info": "Erstellt ein neues Verzeichnis {dirname}", 
+        "command": "mkdir {dirname}", 
+        "names": [
+            "dirname"
+        ]
+    }
+]
