@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 # coding: utf-8
 
 # This program is free software. It comes without any warranty, to
@@ -8,9 +8,9 @@
 # http://sam.zoy.org/wtfpl/COPYING for more details.
 
 """
-    ~~~~~~~~~~
-    Bashfriend
-    ~~~~~~~~~~
+    ~~~~~~~~
+    Bashmate
+    ~~~~~~~~
     
     Simnple Tool to manage Snippets / Templates for Shell Commands.
     Those Templates can be filled with values via a GUI.
@@ -47,8 +47,10 @@ class CommandTemplate(object):
     def __repr__(self):
         return "<CommandTemplate({0})>".format(self.command)
     
-    def render(self, **kwargs):          
-        return self.command.format(**kwargs)
+    def render(self, **kwargs):
+        if len(kwargs):
+            return self.command.format(**kwargs)
+        return self.command
 
 
 class CommandTemplateEncoder(json.JSONEncoder):
@@ -202,7 +204,8 @@ class CommandDialog(QDialog):
     def parseNames(self, text):
         try:
             names = [FIELDNAME(token) for token in unicode(text).\
-                    _formatter_parser() if FIELDNAME(token) is not None]
+                    _formatter_parser() if FIELDNAME(token) is not None and
+                    len(FIELDNAME(token))]
         # einzelne "{" oder "}"; beim Tippen tritt das logischer Weise auf
         except ValueError:
             pass
